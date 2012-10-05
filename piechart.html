@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Pie Chart</title>
+<meta charset="utf-8">
+<script src="pie1.js"></script>
+<style>
+</style>
+<script>
+function createPieChart() {
+	var pie = new Pie( "piechart", 
+		{
+			includeLabels: true, 
+			segments: [new PieSegment(1, 120, "120%", ["#FFDAB9", "#FFDAB9"], LABEL_LOCATION_ALONG_RADIUS),
+			           new PieSegment(2, 25, "25%", ["#E6E6FA", "#E6E6FA"], LABEL_LOCATION_ALONG_ARC),
+					   new PieSegment(3, 75, "75%", ["#E0FFFF", "#E0FFFF"], LABEL_LOCATION_ALONG_ARC),
+					   new PieSegment(4, 40, "40%", ["#FFDAB9", "#FFDAB9"], LABEL_LOCATION_ALONG_ARC),
+					   new PieSegment(5, 20, "20%", ["#E6E6FA", "#E6E6FA"], LABEL_LOCATION_ALONG_ARC),
+					   new PieSegment(6, 30, "30%", ["#E0FFFF", "#E0FFFF"], LABEL_LOCATION_ALONG_ARC),
+					   new PieSegment(7, 50, "50%", ["#E6E6FA", "#E6E6FA"], LABEL_LOCATION_ALONG_ARC)]
+		}
+	);
+
+	pie.draw();
+}
+
+window.onload = createPieChart;
+</script>
+</head>
+<body>
+
+<canvas id="piechart" width="600" height="600" style="border:1px solid lightgrey;">
+</canvas>
+
+</body>
+</html>
